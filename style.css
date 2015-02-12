@@ -1,0 +1,111 @@
+html {
+    background: #025;
+    margin:0;
+    padding:0;
+}
+
+body {
+    color: lightblue;
+    font-size: 16px;
+    font-family: Garamond, "Adobe Garamond Pro", serif;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.audible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.audible.focusable:active,
+.audible.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #eee;
+}
+
+a:hover {
+    color: #999;
+}
+
+a:active {
+    color: lightblue;
+}
+
+#banner {
+    background: rgba(0,0,0,0.2);
+    padding: 1em;
+}
+
+#banner h1 {
+    margin:0;
+}
+
+#main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#text, #empirical-explanation, #commentary {
+  flex: 1 100%;
+}
+
+#banner, #text, #empirical-explanation, #commentary{        
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+@media (min-width: 768px) {
+
+#text {
+    flex: 2 0px;
+    order: 2;
+}
+
+#empirical-explanation {
+  order: 1;
+}
+
+#commentary {
+    order: 3;
+}
+
+#empirical-explanation, #commentary{
+  flex: 0 0 20em;
+}
+
+#text {
+    border: 3px solid rgba(255,255,255,0.2);
+    border-width: 0 3px;
+}
+
+
+}
